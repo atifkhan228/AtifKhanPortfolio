@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#09090d">
+<meta name="description" content="Atif Khan — Developer, creator and builder. Explore software, game development and roleplay projects.">
+<title>Atif Khan | Developer Portfolio</title>
+<style>
+:root{color-scheme:dark;--bg:#09090d;--panel:#15151c;--line:#30303a;--text:#f5f5f7;--muted:#a2a2b0;--red:#ed3345}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% -10%,#38121b,transparent 45%),var(--bg);color:var(--text);font:16px/1.6 system-ui,sans-serif}.wrap{width:min(1050px,92%);margin:auto}.top{display:flex;align-items:center;gap:14px;padding:22px 0;border-bottom:1px solid #ffffff18}.avatar{width:52px;height:52px;border-radius:16px;object-fit:cover}.brand{flex:1}.brand h1{font-size:1rem;letter-spacing:.1em;margin:0}.brand p{font-size:.75rem;color:var(--muted);margin:2px 0}.btn{display:inline-block;border:1px solid var(--line);border-radius:12px;padding:10px 15px;color:white;text-decoration:none;background:#17171e;cursor:pointer}.primary{background:var(--red);border-color:var(--red)}.hero{padding:76px 0 58px;max-width:760px}.eyebrow{color:#ff8892;font-size:.76rem;font-weight:800;letter-spacing:.16em}.hero h2{font-size:clamp(3rem,9vw,5.8rem);line-height:1;letter-spacing:-.06em;margin:14px 0}.hero h2 span{color:#ff5967}.hero p{color:#b9b9c5;max-width:620px;font-size:1.05rem}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.head{margin:25px 0 15px}.head h2{margin:0;font-size:1.6rem}.muted{color:var(--muted)}.filters{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.filter{border:1px solid var(--line);border-radius:999px;background:var(--panel);color:white;padding:9px 14px}.filter.active{background:var(--red);border-color:var(--red)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:20px 0 65px}.card{border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#19151b,#111116);padding:22px;min-width:0}.symbol{font-size:1.8rem;color:#ff5967}.tag{display:inline-block;font-size:.72rem;color:#ffadb4;background:#29161b;border:1px solid #57313a;border-radius:99px;padding:3px 9px;margin:8px 0}.card h3{margin:5px 0}.card p{color:var(--muted);font-size:.9rem}.quote{border:1px solid #4a242d;background:#191015;border-radius:20px;padding:25px;margin:30px 0 50px}.quote h2{margin-top:0}.quote strong{color:#ff8e98}.footer{border-top:1px solid #ffffff18;text-align:center;padding:25px;color:#858592;font-size:.82rem}@media(max-width:700px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:55px 0 40px}}@media(max-width:480px){.grid{grid-template-columns:1fr}.top .btn{font-size:.8rem;padding:8px}.avatar{width:44px;height:44px}}
+</style>
+</head>
+<body>
+<header class="wrap top">
+<img class="avatar" src="./1791966668675.jpg" alt="Atif Khan" onerror="this.style.display='none'">
+<div class="brand"><h1>ATIF KHAN</h1><p>DEVELOPER · CREATOR · BUILDER</p></div>
+<a class="btn" href="#projects">My Work ↘</a>
+</header>
+<main class="wrap">
+<section class="hero">
+<div class="eyebrow">MY DEVELOPER PORTFOLIO</div>
+<h2>Ideas into<br><span>reality.</span></h2>
+<p>I build, experiment, and turn ideas into working digital projects. Explore my work across web development, Android, game systems and roleplay experiences.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore Projects</a><a class="btn" href="#about">My Philosophy</a></div>
+</section>
+<section id="projects">
+<div class="head"><div class="eyebrow">THE COLLECTION</div><h2>Featured Work</h2><p class="muted">Projects and prototypes I'm building.</p></div>
+<div class="filters" id="filters">
+<button class="filter active" data-filter="All">All Work</button>
+<button class="filter" data-filter="Web">Web Development</button>
+<button class="filter" data-filter="Games">Games & Roleplay</button>
+<button class="filter" data-filter="Android">Android</button>
+</div>
+<div class="grid" id="grid">
+<article class="card" data-category="Web"><div class="symbol">⌘</div><span class="tag">Web Development</span><h3>Developer Portfolio</h3><p>A personal project archive showcasing development work, experiments and digital creations.</p></article>
+<article class="card" data-category="Games"><div class="symbol">⚔</div><span class="tag">SA-MP · Roleplay</span><h3>Veridian Rise RP</h3><p>A roleplay server project focused on account systems, gameplay features and structured government factions.</p></article>
+<article class="card" data-category="Android"><div class="symbol">▣</div><span class="tag">Android · Prototype</span><h3>Veridian SAMP Client</h3><p>An experimental Android launcher and client project for a mobile roleplay experience.</p></article>
+</div>
+</section>
+<section id="about" class="quote"><div class="eyebrow">A DEVELOPER'S MINDSET</div><h2>Build what you wish existed.</h2><p>Great developers don't just write code. They turn ideas into working realities.</p><strong>Dream big. Build relentlessly. Let your work speak.</strong></section>
+</main>
+<footer class="footer">ATIF KHAN · PERSONAL PROJECT ARCHIVE</footer>
+<script>
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
+ document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b===button));
+ document.querySelectorAll('[data-category]').forEach(card=>{
+  card.hidden=button.dataset.filter!=='All'&&card.dataset.category!==button.dataset.filter;
+ });
+}));
+</script>
+</body>
+</html>
